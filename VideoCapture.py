@@ -13,7 +13,7 @@ class VideoCapture:
     def __del__(self):
         if self.vid.isOpened():
             self.vid.release()
-        self.window.mainloop()
+        #self.window.mainloop()
 
     def get_frame(self):
         # sourcery skip: assign-if-exp, remove-unnecessary-else, swap-if-else-branches
@@ -25,5 +25,4 @@ class VideoCapture:
                 return (ret, None)
         else:
             return (ret, None)
-    
     
